@@ -1,6 +1,6 @@
 body {
   font-size: 20px;
-  background-color: rgb(216, 222, 226);
+  background-color: rgb(197, 202, 206);
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -63,8 +63,9 @@ body {
 }
 nav {
   width: 100%;
+  height: 160px;
   min-height: 90px;
-  max-height: 100px;
+  max-height: 300px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -75,9 +76,11 @@ nav {
   color: white;
   font-size: 24px;
 }
-
-.ico {
-  filter: brightness(0) invert(1);
+.nav-name{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* select,
@@ -85,6 +88,11 @@ option {
   background: none;
   border: 0;
 } */
+h1:hover{
+  text-shadow: rgba(245, 245, 243, 0.798) 1px 0 10px;} 
+.ico {
+  filter: brightness(0) invert(1);
+}
 .recomend {
   margin-top: 50px;
   margin-left: 5%;
@@ -132,7 +140,14 @@ button {
 .but {
   text-align: center;
 }
+button:hover {
+  background-color: rgba(9, 9, 9, 0.224);
+  color: black;
+}
 @media (max-width: 767px) {
+  .ico{
+    margin-bottom: 10%;
+  }
   .recomend {
     max-height: 220px;
   }
@@ -156,12 +171,10 @@ button {
     font-size: 9px;
     text-align: center;
   }
-  .dates {
-    max-height: 200px;
-  }
+  
   .dates-text {
     font-size: 12px;
-    max-height: 250px;
+    
   }
 }
 @media (min-width: 1200px) {
@@ -181,7 +194,7 @@ button {
 }
 #disco {
   /* width: 100%;
-  margin-bottom: 10% 0; */
+  margin-bottom: 10%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,8 +210,8 @@ button {
   margin-top: 100px;
 }
 .dates {
-  margin-top: 50px;
-  margin-left: 5%;
+ 
+  margin: 50px 0 50px 5%;
   width: 90%;
   height: auto;
   display: grid;
@@ -229,7 +242,7 @@ button {
 }
 .info-dates {
   width: 70%;
-  margin: 0 15% 50px 15%;
+  margin:  20% 15%;
   height: 100px;
   margin-top: 5%;
   display: flex;
@@ -238,16 +251,16 @@ button {
 }
 .info-trip,
 .info-watch {
-  background-color: rgba(0, 0, 0, 0.338);
-  display: block;
+  color: rgba(0, 0, 0, 0.466);
+  display: inline-block;
   align-items: center;
-  width: 25%;
+  width: 70%;
   margin: 0 10%;
-  color: aliceblue;
+  
 }
 .info-watch-1 {
   text-transform: uppercase;
-  display: flex;
+  display: inline;
   justify-content: center;
   align-items: center;
 }
@@ -255,4 +268,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer{
+  width: 100%;
+  height: 200px;
+  background: #000000d3;
 }
