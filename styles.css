@@ -1,8 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 20px;
   background-color: rgb(197, 202, 206);
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  /* font-family: 'Comfortaa', cursive; */
 }
 
 .video,
@@ -26,7 +29,7 @@ body {
   position: relative;
 }
 .header:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -37,7 +40,7 @@ body {
   height: 100%;
 }
 .info-disco:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -63,42 +66,83 @@ body {
 }
 nav {
   width: 100%;
-  height: 160px;
-  min-height: 90px;
-  max-height: 300px;
+  height: 80px;
+  max-height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
+  /* position: absolute; */
+  /* left: 10%;
+  top: 10%; */
   color: white;
+  z-index: 4;
   font-size: 24px;
+  background-color: hwb(0 5% 95% / 0.187);
 }
-.nav-name{
+.nav-name {
   width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.nav-name:hover span {
+  filter: blur(2px);
+}
+.nav-name span:hover {
+  filter: blur(0px);
+  color: #282727;
+}
+.search__input {
+  width: 0;
+  transform: 0.5s;
+}
+.search__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+.search__button:hover {
+  color: rgba(0, 0, 255, 0.74);
+}
+.search:focus-within input {
+  width: 160px;
+}
 
-/* select,
-option {
-  background: none;
-  border: 0;
-} */
-h1:hover{
-  text-shadow: rgba(245, 245, 243, 0.798) 1px 0 10px;} 
+.search {
+  display: inline-flex;
+
+  background: linear-gradient(194deg, #424142, #f8f5f8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 40px;
+}
+.search :is(input, button) {
+  color: inherit;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+h1:hover {
+  text-shadow: rgba(245, 245, 243, 0.798) 1px 0 10px;
+}
 .ico {
   filter: brightness(0) invert(1);
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 .recomend {
   margin-top: 50px;
   margin-left: 5%;
   width: 90%;
-
-  height: 700px;
+  height: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(1, 1fr);
@@ -128,7 +172,7 @@ h1:hover{
   background-position: center;
 }
 
-button {
+.more-info {
   width: 70px;
   height: 70px;
   border: 0;
@@ -140,13 +184,13 @@ button {
 .but {
   text-align: center;
 }
-button:hover {
+.more-info:hover {
   background-color: rgba(9, 9, 9, 0.224);
   color: black;
 }
 @media (max-width: 767px) {
-  .ico{
-    margin-bottom: 10%;
+  .nav-name {
+    width: auto;
   }
   .recomend {
     max-height: 220px;
@@ -154,16 +198,14 @@ button:hover {
   .header-text {
     font-size: 10px;
   }
-  button {
+  .more-info {
     width: 50px;
     height: 50px;
   }
   span {
     display: none;
   }
-  #mag {
-    display: none;
-  }
+
   body {
     font-size: 16px;
   }
@@ -171,10 +213,9 @@ button:hover {
     font-size: 9px;
     text-align: center;
   }
-  
+
   .dates-text {
     font-size: 12px;
-    
   }
 }
 @media (min-width: 1200px) {
@@ -185,9 +226,9 @@ button:hover {
     width: 90px;
     height: 90px;
   }
-  .recomend {
+  /* .recomend {
     height: 900px;
-  }
+  } */
   .dates {
     max-height: 600px;
   }
@@ -210,7 +251,6 @@ button:hover {
   margin-top: 100px;
 }
 .dates {
- 
   margin: 50px 0 50px 5%;
   width: 90%;
   height: auto;
@@ -240,37 +280,73 @@ button:hover {
   width: 80%;
   height: auto;
 }
-.info-dates {
-  width: 70%;
-  margin:  20% 15%;
+.form-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+fieldset {
+  margin-top: 15%;
+  width: 50%;
   height: 100px;
-  margin-top: 5%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.142);
+  flex-wrap: wrap;
 }
-.info-trip,
-.info-watch {
-  color: rgba(0, 0, 0, 0.466);
-  display: inline-block;
-  align-items: center;
-  width: 70%;
-  margin: 0 10%;
-  
+fieldset:hover {
+  background-color: rgba(195, 195, 195, 0.669);
+  border: 2px solid white;
+  box-shadow: #fff 0 0 90px;
 }
-.info-watch-1 {
-  text-transform: uppercase;
-  display: inline;
-  justify-content: center;
-  align-items: center;
+legend {
+  text-align: center;
 }
-.info-watch-2 {
+.book-form {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-footer{
+  justify-content: space-around;
   width: 100%;
+}
+.book-input {
+  border: none;
+  outline: none;
+
+  height: 30px;
+}
+.book-input:hover {
+  box-shadow: #0a0a0a 0 0 10px;
+  border: 1px solid #0a0a0a8f;
+}
+.book-but {
+  border: none;
+  width: 50px;
+  height: 30px;
+}
+.book-but:hover {
+  background-color: #0a0a0a9b;
+  color: #ffffff;
+}
+footer {
+  margin-top: 15%;
   height: 200px;
-  background: #000000d3;
+  background: linear-gradient(194deg, #624f34, #f8f8f6);
+  color: #0000006e;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.see-you {
+  text-align: center;
+}
+.contact {
+  font-size: 18px;
+  width: 60%;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-around;
 }

@@ -6,30 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adventure Time</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Pangolin&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="header">
-      <div>
-        <nav>
-          <img
-            class="ico"
-            src="https://cdn-icons-png.flaticon.com/512/998/998822.png?w=740&t=st=1683391335~exp=1683391935~hmac=1784a3bc7095258b0cef09259abe13124e8a7640b8df6c4d3cf003e7fb7ecfad"
-            width="45"
-            alt=""
-          />
-          <div class="nav-name">
-            <span> Discover </span>
-            <span>Experience</span>
-            <span>Contact</span>
-            <img
-              class="ico"
-              id="mag"
-              src="https://cdn-icons-png.flaticon.com/512/1251/1251015.png?w=740&t=st=1683390675~exp=1683391275~hmac=5411094b4b7460b4d93d644e223ebefe2a260650eda6314342b43f46f499ab58"
-              width="25"
-              alt=""
-            />
-          </div>
-        </nav>
       </div>
       <div class="video">
         <video
@@ -44,6 +26,31 @@
         <h1>Your adventure starts here</h1>
       </div>
     </div>
+    <nav>
+      <img
+        class="ico"
+        src="https://cdn-icons-png.flaticon.com/512/998/998822.png?w=740&t=st=1683391335~exp=1683391935~hmac=1784a3bc7095258b0cef09259abe13124e8a7640b8df6c4d3cf003e7fb7ecfad"
+        width="45"
+        alt=""
+      />
+      <div class="nav-name">
+        <span><a href="#disco">Discover </a></span>
+        <span><a href="#book">Booking</a></span>
+        <span><a href="#foot">Contact</a></span>
+        <form class="search">
+          <input placeholder="Search" class="search__input" />
+          <button class="search__button">
+            <i class="ri-search-2-line"></i>
+            <img
+              class="ico"
+              id="mag"
+              src="https://cdn-icons-png.flaticon.com/512/1251/1251015.png?w=740&t=st=1683390675~exp=1683391275~hmac=5411094b4b7460b4d93d644e223ebefe2a260650eda6314342b43f46f499ab58"
+              width="24"
+            />
+          </button>
+        </form>
+      </div>
+    </nav>
     <!-- рекомендации-->
     <div class="name">
       <h2>Greece</h2>
@@ -58,7 +65,7 @@
       </div>
       <div class="photo-greece"></div>
     </div>
-    <div class="but"><button>More info</button></div>
+    <div class="but"><button class="more-info">More info</button></div>
     <div class="name">
       <h2>Corfu Town</h2>
     </div>
@@ -72,7 +79,7 @@
         </p>
       </div>
     </div>
-    <div class="but"><button>More info</button></div>
+    <div class="but"><button class="more-info">More info</button></div>
     <div class="info-disco">
       <div class="discover">
         <img
@@ -108,17 +115,23 @@
         </p>
       </div>
     </div>
-
-    <div class="info-dates">
-      <div class="info-trip">
-        <span class="info-watch-1">Total trip</span>
-        <span class="info-watch-2">90 km</span>
-      </div>
-      <div class="info-watch">
-        <span class="info-watch-1">Watch amount</span>
-        <span class="info-watch-2">320 h</span>
-      </div>
+    <div class="form-center">
+      <fieldset class="form" id="book">
+        <legend>Booking Form</legend>
+        <form class="book-form">
+          <input class="book-input" type="text" placeholder="Name..." />
+          <input class="book-input" type="tel" placeholder="Phone..." />
+          <input class="book-input" type="email" placeholder="Email..." />
+          <button class="book-but">return</button>
+        </form>
+      </fieldset>
     </div>
-    <footer></footer>
+    <footer id="foot">
+      <h2 class="see-you">SEE YOU</h2>
+      <div class="contact">
+        <p>discover@gmail.com</p>
+        <p>+39 02 4575 1955</p>
+      </div>
+    </footer>
   </body>
 </html>
