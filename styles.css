@@ -219,12 +219,13 @@ a {
   margin-top: 100px;
 }
 .dates {
-  margin: 50px 0 50px 5%;
+  margin: 50px auto;
   width: 90%;
+  max-width: 1100px;
   height: auto;
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 100px 500px;
 }
 .dates-photo {
   background-image: url(https://images.pexels.com/photos/15844084/pexels-photo-15844084.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
@@ -240,6 +241,7 @@ a {
   text-align: center;
 }
 .dates-text {
+ 
   background-color: rgba(0, 0, 0, 0.338);
   z-index: 1;
   margin-right: 10%;
@@ -254,14 +256,13 @@ a {
   justify-content: center;
 }
 fieldset {
-  margin-top: 15%;
+  margin-top: 10%;
   width: 50vw;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.142);
-  
 }
 fieldset:hover {
   background-color: rgba(195, 195, 195, 0.669);
@@ -298,8 +299,9 @@ legend {
   color: #ffffff;
 }
 footer {
-  margin-top: 15%;
-  max-height: 200px;
+  margin-top: 10%;
+  min-height: 150px;
+  max-height: 300px;
   background: linear-gradient(#c5cace, #624f34);
   color: #0000006e;
   padding: 10px;
@@ -320,14 +322,14 @@ footer {
   justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
-  nav{
+  nav {
     background: none;
     position: absolute;
-    top:5%;
+    top: 2%;
     left: 0;
   }
   .nav-name {
-    display:none;
+    display: none;
   }
   .recomend {
     max-height: 220px;
@@ -354,27 +356,27 @@ footer {
   .dates-text {
     font-size: 12px;
   }
-  footer{
+  footer {
     flex-direction: column;
   }
-  .contact{
-   display: block;
-   text-align: center;
-    
+  .contact {
+    display: block;
+    text-align: center;
+  }
+  .dates {
+    grid-template-rows: 100px 1fr;
   }
 }
-@media screen and (max-width: 1100px){
-  fieldset{
+@media screen and (max-width: 1100px) {
+  fieldset {
     flex-direction: column;
     width: 30vw;
     height: auto;
   }
-  .book-form{
+  .book-form {
     gap: 5%;
-  
   }
-  .book-input{
+  .book-input {
     margin: 5% 25%;
   }
-
 }
