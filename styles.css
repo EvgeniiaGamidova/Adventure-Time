@@ -3,7 +3,7 @@ html {
 }
 body {
   font-size: 20px;
-  background-color: rgb(197, 202, 206);
+  background-color: #c5cace;
   margin: 0;
   /* font-family: 'Comfortaa', cursive; */
 }
@@ -188,51 +188,7 @@ a {
   background-color: rgba(9, 9, 9, 0.224);
   color: black;
 }
-@media (max-width: 767px) {
-  .nav-name {
-    width: auto;
-  }
-  .recomend {
-    max-height: 220px;
-  }
-  .header-text {
-    font-size: 10px;
-  }
-  .more-info {
-    width: 50px;
-    height: 50px;
-  }
-  span {
-    display: none;
-  }
 
-  body {
-    font-size: 16px;
-  }
-  #Diverse {
-    font-size: 9px;
-    text-align: center;
-  }
-
-  .dates-text {
-    font-size: 12px;
-  }
-}
-@media (min-width: 1200px) {
-  body {
-    font-size: 27px;
-  }
-  button {
-    width: 90px;
-    height: 90px;
-  }
-  /* .recomend {
-    height: 900px;
-  } */
-  .dates {
-    max-height: 600px;
-  }
-}
 #disco {
   /* width: 100%;
   margin-bottom: 10%; */
@@ -287,13 +243,13 @@ a {
 }
 fieldset {
   margin-top: 15%;
-  width: 50%;
+  width: 50vw;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.142);
-  flex-wrap: wrap;
+  
 }
 fieldset:hover {
   background-color: rgba(195, 195, 195, 0.669);
@@ -308,6 +264,7 @@ legend {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  flex-wrap: wrap;
 }
 .book-input {
   border: none;
@@ -330,8 +287,8 @@ legend {
 }
 footer {
   margin-top: 15%;
-  height: 200px;
-  background: linear-gradient(194deg, #624f34, #f8f8f6);
+  max-height: 200px;
+  background: linear-gradient(#c5cace, #624f34);
   color: #0000006e;
   padding: 10px;
   box-sizing: border-box;
@@ -350,3 +307,72 @@ footer {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (max-width: 767px) {
+  
+  .nav-name {
+    width: auto;
+  }
+  .recomend {
+    max-height: 220px;
+  }
+  .header-text {
+    font-size: 10px;
+  }
+  .more-info {
+    width: 50px;
+    height: 50px;
+  }
+  span {
+    display: none;
+  }
+
+  body {
+    font-size: 16px;
+  }
+  #Diverse {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .dates-text {
+    font-size: 12px;
+  }
+  footer{
+    flex-direction: column;
+  }
+  .contact{
+   display: block;
+   text-align: center;
+    
+  }
+}
+@media screen and (max-width: 1100px){
+  fieldset{
+    flex-direction: column;
+    width: 30vw;
+    height: auto;
+  }
+  .book-form{
+    gap: 5%;
+  
+  }
+  .book-input{
+    margin: 5% 25%;
+  }
+
+}
+/* @media screen and(min-width: 1200px) {
+  body {
+    font-size: 27px;
+  }
+  button {
+    width: 90px;
+    height: 90px;
+  }
+  /* .recomend {
+    height: 900px;
+  } */
+  .dates {
+    max-height: 600px;
+  }
+} */
