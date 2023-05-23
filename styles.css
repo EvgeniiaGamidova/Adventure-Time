@@ -56,8 +56,8 @@ body {
   justify-content: center;
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
+  height: auto;
+  top: 45%;
   left: 0;
   z-index: 3;
   text-transform: uppercase;
@@ -320,9 +320,14 @@ footer {
   justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
-  
+  nav{
+    background: none;
+    position: absolute;
+    top:5%;
+    left: 0;
+  }
   .nav-name {
-    width: auto;
+    display:none;
   }
   .recomend {
     max-height: 220px;
@@ -373,18 +378,3 @@ footer {
   }
 
 }
-/* @media screen and(min-width: 1200px) {
-  body {
-    font-size: 27px;
-  }
-  button {
-    width: 90px;
-    height: 90px;
-  }
-  /* .recomend {
-    height: 900px;
-  } */
-  .dates {
-    max-height: 600px;
-  }
-} */
